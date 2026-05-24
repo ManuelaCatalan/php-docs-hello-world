@@ -4,11 +4,9 @@ $dbHost = getenv('DB_HOST');
 $dbName = "prueba";         
 $dbUser = getenv('DB_USER');
 $dbPass = getenv('DB_PASSWORD');
-
 if (!$dbHost || !$dbUser || $dbPass === false) {
     throw new \RuntimeException('Faltan variables de entorno para la conexión a la base de datos.');
 }
-
 // DSN con charset utf8mb4
 $dsn = "mysql:host={$dbHost};dbname={$dbName};charset=utf8mb4";
 
